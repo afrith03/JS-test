@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 18-07-2023 -->
+    <!--1.JavaScript has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
+
+Consider a && b:
+
+a is checked if it is true or false.
+If a is false, false is returned.
+b is checked if it is true or false.
+If b is false, false is returned.
+Otherwise, true is returned (as both a and b are therefore true ).
+The && operator will only return true for true && true.
+
+1.Make a function using the && operator.
+2.Perform arithmetic operations using buttons.
+3.Perform assignment operations using buttons.
+4.Write a program on the 8 data types and object data types.-->
+
+    <!-- 1.Make a function using the && operator. -->
+    <h4>1.Make a function using the && operator.</h4>
+    <button onclick="testFunction()">Test Function</button> <br />
+    <script>
+      function testFunction() {
+        const a = true;
+        const b = false;
+        const result = checkBothTrue(a, b); //this will be false
+        console.log(result);
+      }
+
+      function checkBothTrue(a, b) {
+        return a && b;
+      }
+    </script>
+    <!-- 1.Make a function using the && operator. end -->
+    <!-- ======================================================================================================= -->
+    <!-- 2.Perform arithmetic operations using buttons. -->
+    <h4>2.Perform arithmetic operations using buttons.</h4>
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <p id="result"></p>
+    <script>
+      function add() {
+        const num1 = parseInt(prompt("Enter the first number:"));
+        const num2 = parseInt(prompt("Enter the second number:"));
+        const result = num1 + num2;
+        document.getElementById("result").innerText = `Result: ${result}`;
+      }
+
+      function subtract() {
+        const num1 = parseInt(prompt("Enter the first number:"));
+        const num2 = parseInt(prompt("Enter the second number:"));
+        const result = num1 - num2;
+        document.getElementById("result").innerText = `Result: ${result}`;
+      }
+
+      function multiply() {
+        const num1 = parseInt(prompt("Enter the first number:"));
+        const num2 = parseInt(prompt("Enter the second number:"));
+        const result = num1 * num2;
+        document.getElementById("result").innerText = `Result: ${result}`;
+      }
+
+      function divide() {
+        const num1 = parseInt(prompt("Enter the first number:"));
+        const num2 = parseInt(prompt("Enter the second number:"));
+        const result = num1 / num2;
+        document.getElementById("result").innerText = `Result: ${result}`;
+      }
+    </script>
+    <!-- 2.Perform arithmetic operations using buttons. end -->
+
+    <!-- 3.Perform assignment operations using buttons.  -->
+    <h4>3.Perform assignment operations using buttons.</h4>
+    <button onclick="assignment()">Perform Assignment</button>
+    <p id="assignment-result"></p>
+    <script>
+      function assignment() {
+        let value = 10;
+        value += 5; // value is 15
+        value -= 3; // value is 12
+        value *= 2; // value is 24
+        value /= 4; // value is 6
+
+        document.getElementById(
+          "assignment-result"
+        ).innerText = `Result: ${value}`;
+      }
+    </script>
+    <!-- 3.Perform assignment operations using buttons. end -->
+
+    <!-- 4.Write a program on the 8 data types and object data types. -->
+    <script>
+      // 1. Boolean
+      const isTrue = true;
+      // 2. Null
+      const myNullValue = null;
+      // 3. Undefined
+      let undefinedValue;
+      // 4. Number
+      const myAge = 21;
+      // 5. String
+      const myName = "Afrith";
+      // 6. Symbol
+      const sym = Symbol("symbol1");
+      console.log(sym);
+      // 7. BigInt
+      const bigIntNumber = 1234567890123456789012345678901234567890n;
+      // 8. Object
+      const person = {
+        name: "afrith",
+        age: 21,
+        isStudent: true,
+      };
+      // Accessing Object properties
+      console.log(person.name); // Output: 'afrith'
+
+      // 9. Object data type (Reference Type)
+      const fruits = ["apple", "banana", "orange"];
+
+      // Accessing Array elements
+      console.log(fruits[0]); // Output: 'apple'
+    </script>
+
+    <!-- 4.Write a program on the 8 data types and object data types. end -->
+  </body>
+</html>
